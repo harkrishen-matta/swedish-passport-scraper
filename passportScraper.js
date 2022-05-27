@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 
 const PassportScraper = async() => {
-  const browser = await puppeteer.launch({ headless: true});
+  const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox']});
   const page = await browser.newPage();
   await page.goto('https://www.migrationsverket.se/ansokanbokning/valjtyp?0&enhet=U0586&sprak=sv&callback=https:/www.swedenabroad.se');
 
