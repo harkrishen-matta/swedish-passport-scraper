@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const port = 3000;
 const PassportScraper = require("./passportScraper");
 
 app.get("/", (req, res) => {
@@ -15,6 +16,6 @@ app.get("/", (req, res) => {
     );
 });
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Example app listening on port ${port}`);
 });
